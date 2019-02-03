@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <button id="btn1">所有商品</button>
+  <button id="btn2">当前商品全部信息</button>
+  <script src="./axios.min.js"></script>
+  <script>
+    var url = 'http://127.0.0.1:8080/classify'
+    btn1.onclick = function(){
+      axios.get(url).then((res)=>{
+        console.log(res.data)
+      }).catch((err)=>{
+        console.log(err)
+      })
+    }
+    btn2.onclick = function(){
+      axios.get(url+'/detail/70').then((res)=>{
+        console.log(res.data)
+      }).catch((err)=>{
+        console.log(err)
+      })
+    }
+  </script>
+</body>
+</html>

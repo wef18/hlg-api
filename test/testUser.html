@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <button id="btn1">用户登录</button>
+  <button id="btn2">用户注册</button>
+  <button id="btn3">用户退出</button>
+  <button id="btn4">用户信息</button>
+  <script src="./axios.min.js"></script>
+  <script>
+    var url = 'http://127.0.0.1:8080/user'
+    btn1.onclick = function(){
+      var data = {uname:"huanlegou",upwd:"w123456" }
+      axios.post(url+'/login',data).then((res)=>{
+        console.log(res.data)
+      }).catch((err)=>{
+        console.log(err)
+      })
+    }
+    btn2.onclick = function(){
+      var data = {uname:"taobao",upwd:"w123456",phone:"18531245698",ctime:"1549131794"}
+      axios.post(url+'/register',data).then((res)=>{
+        console.log(res.data)
+      }).catch((err)=>{
+        console.log(err)
+      })
+    }
+    btn3.onclick = function(){
+      axios.get(url+'/logout').then((res)=>{
+        console.log(res.data)
+      }).catch((err)=>{
+        console.log(err)
+      })
+    }
+    // btn4.onclick = function(){
+    //   axios.get(url+'/message').then((res)=>{
+    //     console.log(res.data)
+    //   }).catch((err)=>{
+    //     console.log(err)
+    //   })
+    // }
+  </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+{
+  "name": "hlgapi",
+  "version": "1.0.0",
+  "description": "欢乐购后端数据API子系统",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node  ./index.js",
+    "dev": "node-dev  ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wef18/hlgApi.git"
+  },
+  "keywords": [
+    "购物",
+    "网购",
+    "儿童"
+  ],
+  "author": "Wei Erfei",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wef18/hlgApi/issues"
+  },
+  "homepage": "https://github.com/wef18/hlgApi#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "mysql": "^2.16.0"
+  }
+}
