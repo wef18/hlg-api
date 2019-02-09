@@ -19,10 +19,13 @@ app.listen(PORT, () => {
   console.log('Server Listening：' + PORT)
 })
 
+//托管静态文件到public目录
+app.use(express.static(__dirname + '/public'))
 
 //使用第三方中间件
 app.use(cors({
-	'credentials':true
+  'credentials': true,
+  'origin': 'http://127.0.0.1:8088'
 }))
 app.use(bodyParser.json())
 app.use(session({

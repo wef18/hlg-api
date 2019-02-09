@@ -504,10 +504,10 @@ CREATE TABLE hlg_carousel(
   FOREIGN KEY(shop_id) REFERENCES hlg_shop(sid)
 );
 INSERT INTO hlg_carousel VALUES
-(NULL,12,2,"lunbo.1001.jpg","广告轮播",0),
-(NULL,32,3,"lunbo.1002.jpg","广告轮播",0),
-(NULL,56,4,"lunbo.1004.jpg","广告轮播",0),
-(NULL,8,5,"lunbo.1005.jpg","广告轮播",0);
+(NULL,12,2,"lunbo1001.jpg","广告轮播",0),
+(NULL,32,3,"lunbo1002.jpg","广告轮播",0),
+(NULL,56,4,"lunbo1004.jpg","广告轮播",0),
+(NULL,8,5,"lunbo1005.jpg","广告轮播",0);
 /**** 创建购物车表 ****/
 CREATE TABLE hlg_shoppingCart(
   lid           INT PRIMARY KEY AUTO_INCREMENT,
